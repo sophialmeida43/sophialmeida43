@@ -1,11 +1,9 @@
 # System.out.println("Seja bem-vindo ao meu Universo 👾");
-
 👋 Oi, eu sou **Sophia Almeida**! Comecei a estudar programação ainda jovem e atualmente estou em modo:
 
 ✅ +10 XP — Aprendendo  
 ✅ +15 XP — Praticando  
 ✅ +20 XP — Criando projetos  
-
 
 ## 💬 Sobre mim
 📝 Estudante de Desenvolvimento de Sistemas – **SENAI**  
@@ -14,9 +12,8 @@
 🧗‍♂️ Persistente — não paro até entender  
 ✍️ Criativa e sempre melhorando meus códigos  
 
-
 ## 🧠 Habilidades em evolução
-<div style="display: inline_block"><br>
+<div style="display: inline_block">
 
 <img align="center" alt="soph-Java" height="65" width="50" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png">
 <img align="center" alt="soph-Spring Boot" height="40" width="50" src="https://spring.io/img/projects/spring-boot.svg">
@@ -31,8 +28,6 @@
 </div>
 <br>
 “Um código por dia é um bug a menos na vida.”
-
-
 
 ## 🌐 Conecte-se comigo
 <div>
