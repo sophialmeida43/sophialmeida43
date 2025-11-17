@@ -1,63 +1,41 @@
-name: Generate GitHub-snake (slow, black background)
+name: generate snake animation
 
 on:
-  workflow_dispatch:
+  # Executa automaticamente a cada 24 horas
   schedule:
-    - cron: "30 0 * * *" # todo dia às 00:30 (UTC). Mude se quiser.
+    - cron: "0 */24 * * *"
 
-permissions:
-  contents: write
+  # Executa manualmente quando você quiser
+  workflow_dispatch:
+
+  # Executa a cada push na branch main
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  generate:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    timeout-minutes: 5
 
-      - name: Generate snake (svg + gif)
-        uses: Platane/snk@v3
-        id: snk
+    steps:
+      # Gera o arquivo da cobrinha
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
         with:
-          # seu usuário (padrão usa o dono do repo)
-          github_user_name: sophialmeida43
-          # arquivos gerados; o gif gerado será dist/github-snake.gif
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.gif
 
-      - name: Show generated files
-        run: ls -la dist || true
-
-      - name: Install imagemagick and gifsicle
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y imagemagick gifsicle
-
-      - name: Slow down GIF (make snake go slower) and set black background
-        # Ajuste DELAY para controlar a velocidade (maior = MAIS LENTO).
-        run: |
-          SRC="dist/github-contribution-grid-snake.gif"
-          SLOW="dist/github-contribution-grid-snake-slow.gif"
-          FINAL="dist/github-contribution-grid-snake-final.gif"
-          # 1) primeiro aumentamos o delay entre frames (valor em centésimos de segundo)
-          #    Exemplo: --delay=20  => 20/100 = 0.2s por frame (mais lento)
-          gifsicle --no-warnings --delay=20 "$SRC" -o "$SLOW"
-          # 2) garantimos que o fundo fique preto (algumas GIFs tem transparência)
-          #    -coalesce para separar frames, -background black -alpha remove para colocar fundo
-          convert "$SLOW" -coalesce -background black -alpha remove -alpha off -layers optimize "$FINAL"
-          # 3) mostra tamanho do arquivo final
-          ls -lh "$FINAL" || true
-
-      - name: Commit generated files to output branch
-        uses: EndBug/add-and-commit@v9
+      # Envia para o branch "output"
+      - name: push github-contribution-grid-snake.svg to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          author_name: "github-actions[bot]"
-          author_email: "41898282+github-actions[bot]@users.noreply.github.com"
-          message: "chore: update snake animation (auto)"
-          add: "dist/**"
-          branch: output
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
