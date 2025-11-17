@@ -55,7 +55,7 @@
     align="left" 
     alt="Sophia GitHub Stats" 
     height="200" 
-    style="padding-right: 10px;" 
+    style="padding-right: 10 px;" 
     src="https://github-readme-stats.vercel.app/api?username=sophialmeida43&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&locale=pt-br" 
   />
 
@@ -66,4 +66,11 @@
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=sophialmeida43&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=10"
   />
 </p>
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sophialmeida43/sophialmeida43/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sophialmeida43/sophialmeida43/output/github-contribution-grid-snake.svg">
+  <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/sophialmeida43/sophialmeida43/output/github-contribution-grid-snake.svg">
+</picture>
 
