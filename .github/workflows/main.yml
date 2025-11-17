@@ -1,0 +1,32 @@
+name: Generate GitHub Contribution Snake
+
+on:
+  schedule:                       # roda automaticamente (opcional)
+    - cron: "0 */12 * * *"        # a cada 12 horas
+  workflow_dispatch:              # permite rodar manualmente no Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write             # necessário para push dos arquivos gerados
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate snake (SVG dark + light)
+        uses: Platane/snk/svg-only@v3
+        id: snk
+        with:
+          github_user_name: sophialmeida43
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
