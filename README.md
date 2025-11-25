@@ -50,20 +50,6 @@
 </div>
 <br>
 
-<img
-  alt="Sophia GitHub Stats"
-  height="200"
-  src="https://github-readme-stats-nine-azure-39.vercel.app/api?username=sophialmeida43&show_icons=true&theme=tokyonight"
-/>
-
-
-<img
-  align="left"
-  alt="Sophia Linguagens"
-  height="200"
-  src="https://github-readme-stats-nine-azure-39.vercel.app/api/top-langs/?username=sophialmeida43&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=10"
-/>
-
 
 <picture align="center">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sophialmeida43/sophialmeida43/output/github-contribution-grid-snake-dark.svg">
