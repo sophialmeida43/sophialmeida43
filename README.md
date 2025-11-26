@@ -50,6 +50,8 @@
 </div>
 <br>
 
+<p> <img align="left" alt="Sophia GitHub Stats" height="200" style="padding-right: 10 px;" src="https://github-readme-stats.vercel.app/api?username=sophialmeida43&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&locale=pt-br" /> <img align="left" alt="Sophia Linguagens" height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sophialmeida43&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=10" /> </p>
+
 
 <picture align="center">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sophialmeida43/sophialmeida43/output/github-contribution-grid-snake-dark.svg">
