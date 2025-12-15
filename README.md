@@ -49,7 +49,8 @@
 </a>
 </div>
 <br>
-<img align="left" alt="Sophia GitHub stats" height="200"
+
+<img align="left" alt="GitHub Statistics - Sophia Almeida" height="200"
      src="https://github-readme-stats.vercel.app/api?username=sophialmeida43&show_icons=true&theme=radical" />
 
 <img align="left" alt="Sophia Linguagens" height="200"
