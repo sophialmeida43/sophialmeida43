@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&multiline=true&random=true&width=435&separator=%3C&lines=+System.out.println(%22Seja+bem-vindo+ao+meu+Universo+%22+%F0%9F%91%BE%22);%3Cao+meu+Universo+%F0%9F%91%BE%22)](https://git.io/typing-svg)
+## System.out.println("Seja bem-vindo ao meu Universo👾");
 
 👋 Oi, eu sou **Sophia Almeida**! Comecei a estudar programação ainda jovem e atualmente estou em modo:
 
