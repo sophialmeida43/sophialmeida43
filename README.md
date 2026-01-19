@@ -41,7 +41,7 @@
 <img src="https://img.shields.io/badge/Portfólio-FF5722?style=for-the-badge&logo=github&logoColor=white">
 </a>
 
-<a href="mailto:sophia12santos21@gmail.com" target="_blank">
+<a href="mailto:sophia.almeida.work@gmail.com" target="_blank">
 <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
 </a>
 
